@@ -46,7 +46,7 @@ const uiTranslations = {
     }
 };
 
-let currentLang = 'pt-BR';
+let currentLang = localStorage.getItem('preferredLang') || 'pt-BR';
 
 function updateContent() {
     // Update UI elements with data-i18n
@@ -162,24 +162,35 @@ function renderEducation() {
 // Language Switch Event Listeners
 document.getElementById('lang-pt').addEventListener('click', () => {
     currentLang = 'pt-BR';
-    document.getElementById('lang-pt').classList.add('bg-indigo-600', 'text-white');
-    document.getElementById('lang-pt').classList.remove('text-gray-400', 'hover:text-white');
-    document.getElementById('lang-en').classList.remove('bg-indigo-600', 'text-white');
-    document.getElementById('lang-en').classList.add('text-gray-400', 'hover:text-white');
+    localStorage.setItem('preferredLang', currentLang);
+    updateLangUI();
     updateContent();
 });
 
 document.getElementById('lang-en').addEventListener('click', () => {
     currentLang = 'en';
-    document.getElementById('lang-en').classList.add('bg-indigo-600', 'text-white');
-    document.getElementById('lang-en').classList.remove('text-gray-400', 'hover:text-white');
-    document.getElementById('lang-pt').classList.remove('bg-indigo-600', 'text-white');
-    document.getElementById('lang-pt').classList.add('text-gray-400', 'hover:text-white');
+    localStorage.setItem('preferredLang', currentLang);
+    updateLangUI();
     updateContent();
 });
 
+function updateLangUI() {
+    if (currentLang === 'pt-BR') {
+        document.getElementById('lang-pt').classList.add('bg-indigo-600', 'text-white');
+        document.getElementById('lang-pt').classList.remove('text-gray-400', 'hover:text-white');
+        document.getElementById('lang-en').classList.remove('bg-indigo-600', 'text-white');
+        document.getElementById('lang-en').classList.add('text-gray-400', 'hover:text-white');
+    } else {
+        document.getElementById('lang-en').classList.add('bg-indigo-600', 'text-white');
+        document.getElementById('lang-en').classList.remove('text-gray-400', 'hover:text-white');
+        document.getElementById('lang-pt').classList.remove('bg-indigo-600', 'text-white');
+        document.getElementById('lang-pt').classList.add('text-gray-400', 'hover:text-white');
+    }
+}
+
 // Initialize content
 document.addEventListener('DOMContentLoaded', () => {
+    updateLangUI();
     updateContent();
 });
 

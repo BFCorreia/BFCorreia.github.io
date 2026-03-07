@@ -135,7 +135,7 @@ const legalTranslations = {
     }
 };
 
-let currentLang = 'pt-BR';
+let currentLang = localStorage.getItem('preferredLang') || 'pt-BR';
 
 function updateContent() {
     const isPrivacy = window.location.pathname.includes('privacy.html');
@@ -271,21 +271,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnPt.addEventListener('click', () => {
         currentLang = 'pt-BR';
-        btnPt.classList.add('bg-indigo-600', 'text-white');
-        btnPt.classList.remove('text-gray-400', 'hover:text-white');
-        btnEn.classList.remove('bg-indigo-600', 'text-white');
-        btnEn.classList.add('text-gray-400', 'hover:text-white');
+        localStorage.setItem('preferredLang', currentLang);
+        updateLangUI(btnPt, btnEn);
         updateContent();
     });
 
     btnEn.addEventListener('click', () => {
         currentLang = 'en';
-        btnEn.classList.add('bg-indigo-600', 'text-white');
-        btnEn.classList.remove('text-gray-400', 'hover:text-white');
-        btnPt.classList.remove('bg-indigo-600', 'text-white');
-        btnPt.classList.add('text-gray-400', 'hover:text-white');
+        localStorage.setItem('preferredLang', currentLang);
+        updateLangUI(btnPt, btnEn);
         updateContent();
     });
 
+    function updateLangUI(pt, en) {
+        if (currentLang === 'pt-BR') {
+            pt.classList.add('bg-indigo-600', 'text-white');
+            pt.classList.remove('text-gray-400', 'hover:text-white');
+            en.classList.remove('bg-indigo-600', 'text-white');
+            en.classList.add('text-gray-400', 'hover:text-white');
+        } else {
+            en.classList.add('bg-indigo-600', 'text-white');
+            en.classList.remove('text-gray-400', 'hover:text-white');
+            pt.classList.remove('bg-indigo-600', 'text-white');
+            pt.classList.add('text-gray-400', 'hover:text-white');
+        }
+    }
+
+    updateLangUI(btnPt, btnEn);
     updateContent();
 });
