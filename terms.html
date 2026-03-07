@@ -6,23 +6,27 @@
     <title>Termos de Uso - Bruno Correia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              ocean: {
-                50: "#e0f2fe",
-                100: "#bae6fd",
-                200: "#7dd3fc",
-                300: "#38bdf8",
-                400: "#0ea5e9",
-                500: "#0284c7",
-                600: "#0369a1",
-                700: "#075985",
-                800: "#0c4a6e",
-                900: "#082f49",
+              slate: {
+                950: "#020617",
+                900: "#0f172a",
+                800: "#1e293b",
+                700: "#334155",
               },
+              indigo: {
+                400: "#818cf8",
+                500: "#6366f1",
+                600: "#4f46e5",
+              },
+              emerald: {
+                400: "#34d399",
+                500: "#10b981",
+              }
             },
           },
         },
@@ -127,7 +131,7 @@
         <p>
           O uso deste site também é regido por nossa Política de Privacidade.
           Por favor, revise nossa
-          <a href="privacy.html" class="text-ocean-300 hover:underline"
+          <a href="privacy.html" class="text-indigo-400 hover:underline"
             >Política de Privacidade</a
           >
           para entender nossas práticas.
@@ -182,10 +186,10 @@
           <div class="flex gap-6">
             <a
               href="privacy.html"
-              class="text-gray-400 hover:text-ocean-300 transition"
+              class="text-gray-400 hover:text-indigo-400 transition"
               >Política de Privacidade</a
             >
-            <a href="terms.html" class="text-ocean-300 font-medium"
+            <a href="terms.html" class="text-indigo-400 font-medium"
               >Termos de Uso</a
             >
           </div>
