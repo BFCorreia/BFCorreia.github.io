@@ -55,6 +55,12 @@
               >Sobre</a
             >
             <a
+              href="#products"
+              data-i18n="navProducts"
+              class="text-gray-300 hover:text-indigo-400 transition"
+              >Produtos</a
+            >
+            <a
               href="#experience"
               data-i18n="navExperience"
               class="text-gray-300 hover:text-indigo-400 transition"
@@ -109,6 +115,12 @@
             data-i18n="navAbout"
             class="block px-3 py-2 text-gray-300 hover:text-indigo-400"
             >Sobre</a
+          >
+          <a
+            href="#products"
+            data-i18n="navProducts"
+            class="block px-3 py-2 text-gray-300 hover:text-indigo-400"
+            >Produtos</a
           >
           <a
             href="#experience"
@@ -191,8 +203,40 @@
       </div>
     </section>
 
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-slate-950 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 data-i18n="productsTitle" class="text-4xl font-bold text-indigo-400 mb-4">Meus Produtos</h2>
+          <p data-i18n="productsDesc" class="text-gray-400 text-lg max-w-2xl mx-auto">Soluções desenvolvidas através da <span class="font-bold text-white">Tascor Software</span> para resolver problemas reais com tecnologia.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Promo Publisher Card -->
+          <div class="glass-effect rounded-2xl p-8 border border-slate-800 hover:border-indigo-500/50 transition group">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex items-center gap-4">
+                <img src="promo_publisher_logo.png" alt="Promo Publisher" class="w-16 h-16 rounded-xl border border-slate-700 shadow-lg" />
+                <div>
+                  <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition">Promo Publisher</h3>
+                  <p class="text-sm text-indigo-500 font-medium">Tascor Software</p>
+                </div>
+              </div>
+            </div>
+            <p data-i18n="promoDesc" class="text-gray-300 mb-8 leading-relaxed">
+              Plataforma completa de <strong>automação e publicação</strong>. Otimize e escale a sua criação de conteúdo e processos de marketing de forma inteligente.
+            </p>
+            <a href="promo-publisher.html" data-i18n="viewProductBtn" class="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-600/10 text-indigo-400 hover:bg-indigo-600 hover:text-white rounded-lg transition font-medium border border-indigo-600/20 hover:border-indigo-600">
+              Ver Produto
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-slate-950 border-b border-slate-800">
+    <section id="experience" class="py-20 bg-slate-900 border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 data-i18n="experienceTitle" class="text-4xl font-bold text-center mb-12 text-indigo-400">
           Experiência Profissional
@@ -204,7 +248,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-slate-900 border-b border-slate-800">
+    <section id="skills" class="py-20 bg-slate-950 border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 data-i18n="skillsTitle" class="text-4xl font-bold text-center mb-12 text-indigo-400">
           Tecnologias & Skills
@@ -216,7 +260,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 bg-slate-950">
+    <section id="education" class="py-20 bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 data-i18n="educationTitle" class="text-4xl font-bold text-center mb-12 text-indigo-400">
           Formação Acadêmica
@@ -228,7 +272,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+    <section id="contact" class="py-20 bg-slate-950 border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 data-i18n="contactTitle" class="text-4xl font-bold text-center mb-12 text-indigo-400">
           Entre em Contato
