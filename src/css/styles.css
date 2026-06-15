@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-accent: #00E5FF;
+  --color-surface: #111114;
+  --color-surface-hover: #1a1a1f;
+  --color-border: #222226;
+  --color-text-dim: #8A8A93;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0c;
+  color: #EDEDED;
+}
+
+/* Custom minimal scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #222226;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A8A93;
+}
